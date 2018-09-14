@@ -81,7 +81,7 @@ typedef NS_ENUM(NSInteger, PADCheckoutState) {
     /**
      * @brief The checkout was completed, but the transaction was flagged for manual processing.
      * @discussion The Paddle team will handle the transaction manually. If the order is approved,
-     * the user will be able to activate the product later, when the approved order has been processed.
+     * the buyer will be able to activate the product later, when the approved order has been processed.
      */
     PADCheckoutFlagged
 };
@@ -264,8 +264,8 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
 @property (nonnull, copy, readonly) NSString *productID;
 
 /**
- * @brief On expiry of any product trial, if the user chooses to exit the app rather than purchase the displayed product
- * at this time, force-close the app from the product access dialog.
+ * @brief On expiry of any product trial or for a product without a trial, if the user chooses to exit the app
+ * rather than purchase the displayed product at this time, force-close the app from the product access dialog.
  * @discussion By default closing the app is left up to the \c applicationWillTerminate: method
  * of the app delegate. But by setting this property to \c YES we will exit the app's process with an exit code of 0.
  * This prevents the application from reacting to the app closing.
@@ -332,7 +332,7 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
 #pragma mark-- Checkout
 
 /**
- * @brief Show a dialog for a buyer to purchase a Paddle product.
+ * @brief Show a dialog for a user to purchase a Paddle product.
  *
  * @discussion The completion handler is passed the state of the checkout and, if available, relevant data.
  * The data is a dictionary with 2 top-level keys, both are optional and may be omitted: "checkout" and "order".
@@ -400,7 +400,7 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
  *
  * @param message An NSString containing an optional custom message you would like to display to your user
  * @param companyName An NSString containing your company name, which will be displayed to your user
- * @param product The product which the buyer is interested in
+ * @param product The product which the user is interested in
  */
 - (void)showEmailSubscribePromptWithMessage:(nullable NSString *)message
                                 companyName:(nonnull NSString *)companyName
@@ -409,10 +409,10 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
 #pragma mark - Audience (silently)
 
 /**
- * @discussion Directly add a buyer's email address to Audience.
+ * @discussion Directly add a user's email address to Audience.
  * @param email An NSString containing the email address you wish to subscribe
  * @param consent A BOOL indicating if the user has opted in to marketing emails
- * @param product The product which the buyer is interested in
+ * @param product The product which the user is interested in
  */
 - (void)sendEmailSubscribe:(nonnull NSString *)email
                    consent:(BOOL)consent

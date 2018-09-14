@@ -96,7 +96,7 @@ typedef NS_ENUM(NSInteger, PADErrorCode) {
     PADErrorInvalidApiResponse = -113,
 
     /**
-     * @discussion Specifies that we were unable to recover the buyer's license. This may be caused by the buyer
+     * @discussion Specifies that we were unable to recover the user's license. This may be caused by the user
      * entering an invalid email or a network error.
      */
     PADErrorUnableToRecoverLicense = -114,
@@ -137,7 +137,7 @@ typedef NS_ENUM(NSInteger, PADAPIErrorCode) {
 
     /**
      * @discussion Specifies that the action could not be completed because a resource of a different entity
-     * (vendor, buyer, etc.) was specified.
+     * (vendor, user, etc.) was specified.
      */
     PADAPIErrorAccessDenied = 107,
 

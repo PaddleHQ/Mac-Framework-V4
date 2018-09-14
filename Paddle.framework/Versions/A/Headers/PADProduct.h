@@ -355,6 +355,11 @@ typedef NS_ENUM(NSInteger, PADProductType) {
 - (void)resetTrial;
 
 /**
+ * @discussion Expire the trial for this product
+ */
+- (void)expireTrial;
+
+/**
  * @brief Refresh the locally stored data for the product from the vendor dashboard
  * @discussion If no completion handler is given, then the error is passed to the delegate, if the delegate
  * is set and it responds to \c paddleDidError:.

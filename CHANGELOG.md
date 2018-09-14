@@ -1,3 +1,13 @@
+# 4.0.1
+
+New
+- Added debug options menu, primarily for manipulating trials.
+
+Fixed
+- Crash on initialising a new Product that failed to get an analytics write key.
+- Crash on checkout completion for non-licensed products.
+- Product Access UI now correctly shows "quit" when there is no associated trial.
+
 # 4.0.0
 
 v4.0 is the next major release of the Mac SDK and while the changes we've made make it easier to have more flexible billing and end user experiences we'll focus here on the integration side (read more info about usage on our blog https://paddle.com/blog/introducing-mac-sdk-v4/).
