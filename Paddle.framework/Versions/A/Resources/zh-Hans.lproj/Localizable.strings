@@ -157,3 +157,7 @@
 "Order Complete" = "订单完成";
 "Thank you for your order, you'll receive an email shortly." = "感谢您的订购，您稍后将收到一封电子邮件。";
 "Unable to deactivate license. Please try again later." = "无法反激活许可。敬请稍后再试。";
+
+"No Thanks!" = "不用了，谢谢！";
+"Send anonymous usage information?" = "发送匿名使用信息？";
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "您想给％@的开发人员发送匿名使用信息来帮助改进这个应用程序吗？";

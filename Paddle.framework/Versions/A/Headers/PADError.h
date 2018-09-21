@@ -100,6 +100,11 @@ typedef NS_ENUM(NSInteger, PADErrorCode) {
      * entering an invalid email or a network error.
      */
     PADErrorUnableToRecoverLicense = -114,
+
+    /**
+     * @discussion Specifies that a product was not set when attempting to start analytics tracking.
+     */
+    PADErrorAnalyticsProductNotSet = -115,
 };
 
 /**

@@ -1,3 +1,13 @@
+# 4.0.2
+
+Fixed
+- Some buttons appearing blurry on 10.14 dark mode
+- paddleDidError being called with a nil NSError in some cases
+- Corrected German localization for Abort to "Abbrechen"
+- Analytics not being visible on the vendor dashboard
+- "Enter License" checkout button suppressed for Subscription products being purchased
+- SDK versioning not being usefully reflected in "get info"
+
 # 4.0.1
 
 New

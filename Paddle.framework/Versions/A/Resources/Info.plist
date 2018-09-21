@@ -17,13 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.0</string>
+	<string>4.0.2</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>4.0.1</string>
+	<string>4.0.2</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -40,5 +40,7 @@
 	<string>9F2000</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 Paddle. All rights reserved.</string>
+	<key>PADMajorMinorVersion</key>
+	<string>4.0</string>
 </dict>
 </plist>

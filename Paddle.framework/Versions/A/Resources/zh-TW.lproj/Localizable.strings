@@ -154,7 +154,9 @@
 /* No comment provided by engineer. */
 "Your order is being processed. You'll receive an email soon." = "正在處理您的訂單。您很快就會收到一封電子郵件。";
 
-/* FIXME: actual translations please */
-"Order Complete" = "Order Complete";
-"Thank you for your order, you'll receive an email shortly." = "Thank you for your order, you'll receive an email shortly.";
-"Unable to deactivate license. Please try again later." = "Unable to deactivate license. Please try again later.";
+"Order Complete" = "訂購完成";
+"Thank you for your order, you'll receive an email shortly." = "感謝您的訂購，您稍後將收到一封確認電郵。";
+"No Thanks!" = "不要，謝謝！";
+"Send anonymous usage information?" = "傳送匿名使用資訊？";
+"Unable to deactivate license. Please try again later." = "無法停用授權。請稍後再試一次。";
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "您是否要傳送匿名使用資訊給 %@ 的開發者，以協助改善這個應用程式？";

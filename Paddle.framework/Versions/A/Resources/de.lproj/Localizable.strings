@@ -23,7 +23,7 @@
 "By %@" = "Nach %@";
 
 /* No comment provided by engineer. */
-"Cancel" = "Kündigen";
+"Cancel" = "Abbrechen";
 
 /* No comment provided by engineer. */
 "Close" = "Schließen";
@@ -157,3 +157,7 @@
 "Order Complete" = "Bestellung abgeschlossen";
 "Thank you for your order, you'll receive an email shortly." = "Vielen Dank für Ihre Bestellung. Sie erhalten in Kürze eine E-Mail.";
 "Unable to deactivate license. Please try again later." = "Lizenz kann nicht deaktiviert werden. Bitte versuchen Sie es später erneut.";
+
+"No Thanks!" = "Nein Danke!";
+"Send anonymous usage information?" = "Anonyme Nutzungsdaten senden?";
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Möchten Sie anonyme Nutzungsinformationen an die Entwickler von %@ senden um bei der Verbesserung der Anwendung zu helfen?";

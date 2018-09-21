@@ -157,3 +157,7 @@
 "Order Complete" = "Pedido Concluído";
 "Thank you for your order, you'll receive an email shortly." = "Obrigado pelo seu pedido. Receberá um email em breve.";
 "Unable to deactivate license. Please try again later." = "Não foi possível desativar a licença. Por favor, tente de novo mais tarde.";
+
+"No Thanks!" = "Não, obrigado!";
+"Send anonymous usage information?" = "Enviar informações de utilização anónima?";
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Gostaria de enviar informações de utilização anónimas para o desenvolvedor de %@ para ajudar a melhorar a aplicação?";

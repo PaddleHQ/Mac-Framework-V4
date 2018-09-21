@@ -157,3 +157,7 @@
 "Order Complete" = "Заказ завершен";
 "Thank you for your order, you'll receive an email shortly." = "Спасибо за ваш заказ. В ближайшее время на вашу эл. почту придет письмо.";
 "Unable to deactivate license. Please try again later." = "Не удалось деактивировать лицензию. Пожалуйста, повторите попытку позже.";
+
+"No Thanks!" = "Нет, спасибо!";
+"Send anonymous usage information?" = "Отправлять анонимную информацию об использовании?";
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Хотели бы вы отправлять анонимные сведения об использовании разработчику %@, чтобы помочь улучшить приложение?";

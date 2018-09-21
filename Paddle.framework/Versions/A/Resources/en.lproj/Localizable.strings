@@ -50,6 +50,9 @@
 "License Code" = "License Code";
 
 /* No comment provided by engineer. */
+"No Thanks!" = "No Thanks!";
+
+/* No comment provided by engineer. */
 "OK" = "OK";
 
 /* No comment provided by engineer. */
@@ -75,6 +78,9 @@
 
 /* No comment provided by engineer. */
 "Retry" = "Retry";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Send anonymous usage information?";
 
 /* No comment provided by engineer. */
 "Success" = "Success";
@@ -108,6 +114,9 @@
 
 /* No comment provided by engineer. */
 "Welcome to %@!" = "Welcome to %@!";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Would you like to send anonymous usage information to the developer of %@ to help improve the application?";
 
 /* No comment provided by engineer. */
 "You have %d day remaining of your trial period." = "You have %d day remaining of your trial period.";
