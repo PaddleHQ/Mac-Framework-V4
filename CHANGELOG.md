@@ -1,3 +1,11 @@
+# 4.0.3
+
+Fixed
+- App Closed Analytics Event not being sent correctly.
+- NSTimer method >= 10.12 dependancy removed to return support to >= 10.9.5.
+- PaddleAnalyticsKit now correctly exposed.
+- Crash at the end of the checkout process in some cases.
+
 # 4.0.2
 
 Fixed
