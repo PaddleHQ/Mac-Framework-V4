@@ -1,3 +1,10 @@
+# 4.0.4
+
+Fixed:
+
+- Multiple crashes around patchy connectivity and the checkout flow.
+- Timed Trials now more resilient to system clock changes.
+
 # 4.0.3
 
 Fixed

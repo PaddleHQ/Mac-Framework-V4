@@ -7,7 +7,7 @@
 //
 
 #import "PADProduct.h"
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 typedef enum appStores {
     PAKPaddle,
@@ -18,8 +18,12 @@ typedef enum appStores {
 
 @interface PaddleAnalyticsKit : NSObject
 
-+ (void)track:(nonnull NSString *)action properties:(nullable NSDictionary *)properties;
-+ (void)payment:(nonnull NSNumber *)amount currency:(nonnull NSString *)currency product:(nonnull NSString *)product store:(Store)store;
++ (void)track:(nonnull NSString *)action
+    properties:(nullable NSDictionary *)properties;
++ (void)payment:(nonnull NSNumber *)amount
+       currency:(nonnull NSString *)currency
+        product:(nonnull NSString *)product
+          store:(Store)store;
 
 + (void)disableTracking;
 + (void)enableTracking;
