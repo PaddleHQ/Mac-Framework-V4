@@ -1,3 +1,19 @@
+# 4.0.5
+
+New:
+- License Key Recovery UI flow no-longer offers retry on success.
+- Improved support for multiple SDK instances operating under the same bundle ID (plug-ins)
+- Added `sdkDirectory` on shared instance to facilitate symlinking of SDK storage location to different directories.
+- Added `PADVerificationNoActivation` `PADVerificationState` to clarify when a verification failed based on no local activation to verify, rather than a transmission failure or now deactivated activation.
+- Added `PADCheckoutSlowOrderProcessing` `PaddleCheckoutState` for slow order processing edge cases that were previously reported as `PADCheckoutFailed`.
+- Added `migrateV3License` to `PADProduct` to allow more control over the flow of events in a v3 -> v4 upgrade. 
+- Added `PADTriggeredUITypeFinished` `PADTriggeredUIType` for checkout scenarios where the checkout was successful and previously returned `PADTriggeredUITypeCancel`. For example; when a checkout completes for a non-SDK product and doesn't issue a license code.
+
+Fixed:
+- `PADProductDelegate` not always being called on a v3 -> v4 license file migration.
+- `PADDefaultConfiguration` local image not being shown when the remote image can not be retrieved.
+- Some Activation error messages being blank.
+
 # 4.0.4
 
 Fixed:

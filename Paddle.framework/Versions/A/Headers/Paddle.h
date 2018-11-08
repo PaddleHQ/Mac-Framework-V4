@@ -79,6 +79,13 @@ typedef NS_ENUM(NSInteger, PADCheckoutState) {
     PADCheckoutFailed,
 
     /**
+     * @discussion The checkout has been completed and the payment has been taken, but we were unable
+     * to retrieve the status of the order. It will be processed soon, but not soon enough for us to
+     * show the buyer the license activation dialog.
+     */
+    PADCheckoutSlowOrderProcessing,
+
+    /**
      * @brief The checkout was completed, but the transaction was flagged for manual processing.
      * @discussion The Paddle team will handle the transaction manually. If the order is approved,
      * the buyer will be able to activate the product later, when the approved order has been processed.
@@ -163,6 +170,9 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
      * @brief The previous UI action completed successfully and no further UI action needs to be taken by Paddle.
      * @discussion The finished UI type does not signal success or failure. Check the PADProduct properties for the
      * expected result, e.g. whether the product was activated.
+     * @discussion For the checkout dialog, this value indicates that the checkout was completed successfully but no
+     * further action is possible. We may have been unable to retrieve the license code of the order or the checkout
+     * may have been flagged. In either case the user has paid for the product.
      */
     PADTriggeredUITypeFinished
 };
@@ -302,6 +312,15 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
  * @discussion Used to turn on debugging logging and helpers
  */
 + (void)enableDebug;
+
+#pragma mark - Directory access
+
+/**
+ * @brief Returns the full path to the SDK directory where the SDK will create files,
+ * such as product data files and license activation files.
+ * @return The full path as an NSString.
+ */
++ (nonnull NSString *)sdkDirectory;
 
 #pragma mark - UI
 #pragma mark-- Access Control / Activation

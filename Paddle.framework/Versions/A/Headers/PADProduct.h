@@ -28,7 +28,13 @@ typedef NS_ENUM(NSInteger, PADVerificationState) {
     /**
      * @discussion Specifies that we were unable to get a definitive verification result, typically because of poor network.
      */
-    PADVerificationUnableToVerify
+    PADVerificationUnableToVerify,
+
+    /**
+     * @discussion Specifies that there is no license to verify. Check \c product.activated before
+     * verifying the product.
+     */
+    PADVerificationNoActivation
 };
 
 /**
@@ -388,6 +394,14 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  * @return BOOL indicating if the product can be shown in a product access dialog
  */
 - (BOOL)canShowProductAccess;
+
+/**
+ * @brief Migrate an existing v3 license to v4.
+ * @discussion The migration will be skipped if the product is already activated. This makes
+ * the method safe to call on every product initialisation.
+ * @discussion The v3 license is not deleted as part of the migration process.
+ */
+- (void)migrateV3License;
 
 
 @end
