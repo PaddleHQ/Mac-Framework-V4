@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "PaddleV4"
-  s.version = "4.0.5"
+  s.version = "4.0.6"
   s.summary     = "A licensing framework for OS X"
   s.description = "Paddle is an easy to use licensing framework for OS X including App Licensing and In App Purchases."
   s.homepage    = "https://www.paddle.com"
@@ -36,7 +36,7 @@ SOFTWARE.
   }
 
   s.platform = :osx, '10.10'
-  s.source   = { :http => "https://s3.amazonaws.com/paddle-production-sdk-releases/macOS/v4/4.0.5/macOS-sdk-v4.0.5.zip" }
+  s.source   = { :http => "https://s3.amazonaws.com/paddle-production-sdk-releases/macOS/v4/4.0.6/macOS-sdk-v4.0.6.zip" }
 
   s.vendored_framework  = 'Paddle.framework'
   s.requires_arc        = false

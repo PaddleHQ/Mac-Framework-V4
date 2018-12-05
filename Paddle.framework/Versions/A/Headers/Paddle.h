@@ -94,10 +94,181 @@ typedef NS_ENUM(NSInteger, PADCheckoutState) {
 };
 
 /**
+ * @brief The locker data of a single locker of the completed checkout.
+ */
+@interface PADCheckoutLockerData : NSObject
+
+/**
+ * @brief The identifier of the locker.
+ */
+@property (nullable) NSString *lockerID;
+
+/**
+ * @brief The identifier of the product.
+ */
+@property (nullable) NSString *productID;
+
+/**
+ * @brief The name of the product.
+ */
+@property (nullable) NSString *productName;
+
+/**
+ * @brief The URL where the product is hosted.
+ */
+@property (nullable) NSString *downloadURL;
+
+/**
+ * @brief The license code assigned to the buyer.
+ */
+@property (nullable) NSString *licenseCode;
+
+/**
+ * @brief The download instructions.
+ */
+@property (nullable) NSString *instructions;
+
+@end
+
+/**
+ * @brief The order data of the completed checkout.
+ */
+@interface PADCheckoutOrderData : NSObject
+
+/**
+ * @brief The identifier of the order.
+ */
+@property (nullable) NSString *orderID;
+
+/**
+ * @brief The 3-character identifier of the order's currency.
+ */
+@property (nullable) NSString *currency;
+
+/**
+ * @brief The total amount of the checkout that was paid.
+ */
+@property (nullable) NSString *total;
+
+/**
+ * @brief The total amount of checkout, formatted as it was displayed on the checkout.
+ */
+@property (nullable) NSString *formattedTotal;
+
+/**
+ * @brief The date and time on which the checkout was completed, as a string.
+ */
+@property (nullable) NSString *completionDate;
+
+/**
+ * @brief The identifier of the timezone of the completion date.
+ */
+@property (nullable) NSString *completionDateTimezone;
+
+/**
+ * @brief The URL of the order receipt.
+ */
+@property (nullable) NSString *receiptURL;
+
+/**
+ * @brief Indicates that the order has 1 or more lockers.
+ */
+@property BOOL hasLocker;
+
+/**
+ * @brief Indicates that the buyer consented to receiving marketing emails.
+ */
+@property BOOL hasMarketingConsent;
+
+/**
+ * @brief Indicates that the order is for a subscription product.
+ */
+@property BOOL isSubscriptionOrder;
+
+/**
+ * @brief The coupon code of the checkout, if any.
+ */
+@property (nullable) NSString *couponCode;
+
+/**
+ * @brief The formatted tax total.
+ */
+@property (nullable) NSString *formattedTax;
+
+/**
+ * @brief The total tax amount.
+ */
+@property (nullable) NSString *totalTax;
+
+/**
+ * @brief The redirect URL of the checkout, if any.
+ */
+@property (nullable) NSString *redirectURL;
+
+@end
+
+/**
+ * @brief The checkout completed by the buyer.
+ * @discussion The object is created by unwrapping the data included in the \c responseData property
+ * of this object. If you require access to a property that has not been unwrapped, please have a look
+ * at that property.
+ */
+@interface PADCheckoutData : NSObject
+
+/**
+ * @brief The response data that was used to build the \c PADCheckoutData object.
+ * @discussion If a parameter or value is missing and you suspect it may be present, check this
+ * property. There may be new properties that are not yet reflected in the \c PADCheckoutData
+ * structure.
+ */
+@property (nullable) NSDictionary *responseData;
+
+/**
+ * @brief The current state of the checkout.
+ */
+@property (nullable) NSString *state;
+
+/**
+ * @brief The email address of the buyer.
+ */
+@property (nullable) NSString *buyerEmail;
+
+/**
+ * @brief The identifier of the checkout.
+ */
+@property (nullable) NSString *checkoutID;
+
+/**
+ * @brief The URL of the icon image used on the checkout.
+ */
+@property (nullable) NSString *imageURL;
+
+/**
+ * @brief The title used on the checkout.
+ */
+@property (nullable) NSString *title;
+
+/**
+ * @brief The order data of the completed checkout.
+ */
+@property (nullable) PADCheckoutOrderData *orderData;
+
+/**
+ * @brief An array of \c PADCheckoutLockerData objects.
+ */
+#if MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_10
+@property (nullable) NSArray<PADCheckoutLockerData *> *lockers;
+#else
+@property (nullable) NSArray *lockers;
+#endif
+
+@end
+
+/**
  * @brief The completion block to be called when an action was attempted on the checkout dialog.
  * The block is given the state of the checkout attempt and data relevant to the checkout.
  */
-typedef void (^PADCheckoutStateCompletion)(PADCheckoutState state, NSDictionary *_Nullable checkoutData);
+typedef void (^PADCheckoutStateCompletion)(PADCheckoutState state, PADCheckoutData *_Nullable checkoutData);
 
 /**
  * @discussion The following constants describe the possible UI dialogs we may display

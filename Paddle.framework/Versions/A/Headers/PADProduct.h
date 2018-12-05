@@ -8,8 +8,22 @@
 //
 
 @import Foundation;
-#import "PADLicenseMigrate.h"
 #import "PADProductConfiguration.h"
+
+/**
+ * @discussion The following constants describe the possible existing license types.
+ */
+typedef NS_ENUM(NSInteger, PADExistingLicenseType) {
+    /**
+     * @discussion Specifies that the license is a standard user license
+     */
+    PADUserLicense,
+
+    /**
+     * @discussion Specifies that the license is a v3 style site license
+     */
+    PADSiteLicense
+};
 
 /**
  * @discussion The following constants describe the possible product verification states.
@@ -108,7 +122,7 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  * @discussion PADProduct objects are not a live representation of a products current state and so if retained may not be accurate. It is suggested to request a new PADProduct object when needed and then discard.
  */
 
-@interface PADProduct : NSObject <PADLicenseMigrateDelegate>
+@interface PADProduct : NSObject
 
 /**
  * @brief The delegate to be called when the product data is updated.

@@ -1,3 +1,15 @@
+# 4.0.6
+
+New:
+- Additional trial tampering security measures for Apple code signed apps.
+- New bespoke object for the checkout completion dictionary (`PADCheckoutData`)
+- `PADProduct` `lastRefreshDate` now persisted for more finite control of refresh logic.
+
+Fixed:
+- Product Info UI being white initially when app is in dark mode.
+- `PADProduct` `lastRefreshDate` now being correctly updated on a successful refresh.
+- `PADLicenseMigrate` class no-longer public, use `PADProduct` method `migrateV3License` and it's delegate.
+
 # 4.0.5
 
 New:
