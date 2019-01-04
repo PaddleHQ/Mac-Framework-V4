@@ -410,6 +410,14 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
  */
 - (void)paddleDidError:(nonnull NSError *)error;
 
+/**
+ * @brief The app group identifier used by this app and your previous apps.
+ * @discussion The identifier is used to detect licenses from your apps that used either
+ * v3 or v4 of the Paddle SDK. See the \c existingLicenseFromAppGroup method of \c PADProduct
+ * to retrieve the license information from a previously released app.
+ */
+- (nonnull NSString *)appGroupForSharedLicense;
+
 @end
 
 @class PADProductWindowController;

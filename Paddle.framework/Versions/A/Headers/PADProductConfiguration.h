@@ -85,6 +85,8 @@ typedef NS_ENUM(NSInteger, PADProductTrialType) {
 
 /**
  * @discussion The base price of the product before any sales.
+ * @discussion If set, this price will also be used as the current price. This ensures that the product
+ * access dialog always has a price to display to the user.
  */
 @property (nonatomic, nullable) NSNumber *price;
 

@@ -105,6 +105,48 @@ typedef NS_ENUM(NSInteger, PADErrorCode) {
      * @discussion Specifies that a product was not set when attempting to start analytics tracking.
      */
     PADErrorAnalyticsProductNotSet = -115,
+
+    /**
+     * @discussion Specifies that we could not create or find the application support directory used by the SDK.
+     * This may be due to an entitlements exception.
+     * @discussion Without this directory the SDK cannot store licenses, product data, analytics data, etc. We
+     * would not be able to retain licensing information, for instance, which means users would have to activate
+     * the product on every launch. See the separate file failures for further examples of possible failures.
+     */
+    PADErrorSupportDirectoryFailure = -116,
+
+    /**
+     * @discussion Specifies that we could not manipulate the analytics file. This may indicate a permissions
+     * issue.
+     * @discussion Without this file we cannot retain analytics events. If we are unable to send the events before
+     * your app is closed, the recorded events will be lost.
+     */
+    PADErrorAnalyticsFileFailure = -117,
+
+    /**
+     * @discussion Specifies that we could not manipulate the product file. This may indicate a permissions
+     * issue.
+     * @discussion Without the product file we cannot retain information about your product. As a result the
+     * reported product information may differ between app launches, because we are limited to the local product
+     * configuration until the product data is successfully refreshed from the remote configuration. On the next
+     * app launch the same process would take place.
+     */
+    PADErrorProductFileFailure = -118,
+
+    /**
+     * @discussion Specifies that we could not manipulate the license file. This may indicate a permissions
+     * issue.
+     * @discussion Without the license file we cannot retain licensing information across app launches. This can
+     * cause users to have to activate the app on each launch, and the trial may reset on every app launch.
+     */
+    PADErrorLicenseFileFailure = -119,
+
+    /**
+     * @discussion Specifies that we could not read the v3 license file as part of the migration process.
+     * @discussion Without the v3 license file we cannot migrate the license of your previous app. If this error
+     * is reported, the file will at least exist but may not be readable to the current app.
+     */
+    PADErrorV3LicenseFileFailure = -120,
 };
 
 /**

@@ -1,3 +1,14 @@
+# 4.0.7
+
+New:
+- App Groups support for more flexible v3 -> v4 upgrades.
+- Paddle Delegate now informed about failed file system operations.
+
+Fixed:
+- Read Only Activation Dialogue text not always easily readable in dark mode.
+- Product Access dialogue could display the price as 0 if a Product refresh had been unsuccessful.
+- Non-Sheet windows were no longer draggable.
+
 # 4.0.6
 
 New:

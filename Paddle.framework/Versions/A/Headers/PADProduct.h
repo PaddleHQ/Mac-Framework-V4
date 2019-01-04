@@ -77,6 +77,30 @@ typedef NS_ENUM(NSInteger, PADProductType) {
 };
 
 /**
+ * @brief The license information read from the shared user defaults.
+ */
+@interface PADProductAppGroupLicense : NSObject
+
+/**
+ * @brief The date on which the license was activated.
+ * @discussion The activation date may be nil, as it was not always captured in previous
+ * versions of the v3 Paddle SDK.
+ */
+@property (nullable) NSDate *activationDate;
+
+/**
+ * @brief The activated license code.
+ */
+@property (nonnull) NSString *license;
+
+/**
+ * @brief The email that was used to activate the license.
+ */
+@property (nonnull) NSString *activationEmail;
+
+@end
+
+/**
  * @discussion The product delegate is called when the product has been updated with remote data. As the product
  * data is sometimes refreshed through Paddle's SDK methods, the product delegate ensures that you are always aware
  * of updates to the product data.
@@ -416,6 +440,11 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  * @discussion The v3 license is not deleted as part of the migration process.
  */
 - (void)migrateV3License;
+
+/**
+ * @brief Return the license information for this product from another app in the app group.
+ */
+- (nullable PADProductAppGroupLicense *)existingLicenseFromAppGroup:(nonnull NSString *)appGroup;
 
 
 @end
