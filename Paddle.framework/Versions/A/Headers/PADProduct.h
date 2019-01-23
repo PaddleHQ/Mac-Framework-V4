@@ -136,6 +136,22 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  */
 - (void)v3LicenseMigrated:(NSString *)productId type:(PADExistingLicenseType)existingLicenseType;
 
+/**
+ * @brief The product has been activated successfully.
+ * @discussion The product may be activated through the Paddle UI flow and not as part of the first dialog
+ * that the user is shown. This delegate allows you to be notified of the activation regardless of how the
+ * user was able to activate the product.
+ */
+- (void)productActivated;
+
+/**
+ * @brief The product has been deactivated successfully.
+ * @discussion The product may be deactivated through the Paddle UI flow and not as part of the first dialog
+ * that the user is shown. This delegate allows you to be notified of the deactivation regardless of how the
+ * user was able to deactivate the product.
+ */
+- (void)productDeactivated;
+
 @end
 
 /**
@@ -332,13 +348,13 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  *
  * @param productID An NSString containing the productID you wish to prepare
  * @param productType A PADProductType value
- * @param configuration An optional PADProductConfiguration object containing default, or customized, values for the product
+ * @param configuration A PADProductConfiguration object containing default, or customized, values for the product.
  *
  * @return PADProduct a PADProduct object initialized for your request productID
  */
 - (nullable instancetype)initWithProductID:(nonnull NSString *)productID
                                productType:(PADProductType)productType
-                             configuration:(nullable PADProductConfiguration *)configuration;
+                             configuration:(nonnull PADProductConfiguration *)configuration;
 
 /**
  * @discussion Get a PADProduct object for an already initialized productID

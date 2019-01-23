@@ -418,6 +418,17 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
  */
 - (nonnull NSString *)appGroupForSharedLicense;
 
+/**
+ * @brief Called when the purchase of an SDK or feature product has been completed and the activation
+ * of the product can continue without opening the activation dialog.
+ * @discussion If the product can be automatically activated, the user will not be notified of the activation
+ * or the failure to activate. But you will be notified of both events through the delegate methods \c productActivated
+ * (on \c PADProduct) and \c paddleDidError: on this delegate.
+ * @return YES if the product can be activated immediately after purchase. NO if the activation dialog
+ * should be shown with the email and license instead.
+ */
+- (BOOL)canAutoActivate:(nonnull PADProduct *)product;
+
 @end
 
 @class PADProductWindowController;
@@ -470,13 +481,17 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
  * @param apiKey an NSString containing your SDK Product API Key obtained from your vendor dashboard.
  * @param productID an NSString containing your Paddle Product ID. Obtained from your vendor dashboard. This should be a SDK product, other product types can be worked with after this point.
  * @param configuration a PADProductConfiguration object, which can contain default information about your product such as price, name, etc, which is used on first run and no internet connection for UI.
+ * @param delegate An optional Paddle delegate that will be set as the PaddleDelegate.
+ * It’s strongly recommended that you pass the delegate at this point.
+ * Without the delegate you will not be notified of errors that occurred during initialisation and may experience unusual behaviour.
  *
  * @return A Paddle shared instance object
  */
 + (nullable instancetype)sharedInstanceWithVendorID:(nonnull NSString *)vendorID
                                              apiKey:(nonnull NSString *)apiKey
                                           productID:(nonnull NSString *)productID
-                                      configuration:(nullable PADProductConfiguration *)configuration;
+                                      configuration:(nonnull PADProductConfiguration *)configuration
+                                           delegate:(nullable id<PaddleDelegate>)delegate;
 
 /**
  * @discussion Used to get the shared instance object any time after initialization

@@ -1,3 +1,17 @@
+# 4.0.8
+
+New:
+- Vastly improved localization support
+- Product Configuration now required in scenarios where missing data can cause issues.
+- Paddle singleton initialization now accepts a `PaddleDelegate` to allow the error delegate methods to be called in the case of initialization failure.
+- `PADProductDelegate` has new activation and deactivation notification methods `productActivated` and `productDeactivated`.
+- New `PaddleDelegate` method `canAutoActivate` which if `YES` will automatically silently activate a purchased license key.
+
+Fixed:
+- Prompts for keychain access when the keychain considered the app "significantly different", i.e new certificates.
+- "Activating License" working UI now easier to read and has rounded corners.
+- Checking for v3 license no longer creates the directory if it isn't there.
+
 # 4.0.7
 
 New:

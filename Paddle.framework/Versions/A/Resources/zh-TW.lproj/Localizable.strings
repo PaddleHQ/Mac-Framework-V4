@@ -160,3 +160,4 @@
 "Send anonymous usage information?" = "傳送匿名使用資訊？";
 "Unable to deactivate license. Please try again later." = "無法停用授權。請稍後再試一次。";
 "Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "您是否要傳送匿名使用資訊給 %@ 的開發者，以協助改善這個應用程式？";
+"%@ - Checkout" = "%@ - 結帳";
