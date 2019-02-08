@@ -345,7 +345,7 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
      * further action is possible. We may have been unable to retrieve the license code of the order or the checkout
      * may have been flagged. In either case the user has paid for the product.
      */
-    PADTriggeredUITypeFinished
+    PADTriggeredUITypeFinished,
 };
 
 #pragma mark - Delegate Methods

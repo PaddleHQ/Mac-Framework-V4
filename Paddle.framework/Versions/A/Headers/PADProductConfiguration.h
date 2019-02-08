@@ -71,8 +71,17 @@ typedef NS_ENUM(NSInteger, PADProductTrialType) {
 /**
  * @brief Specifies the text displayed to the user of the application, explaining the trial policy of the product.
  * @discussion The trial text only takes effect for products with a trial, either limited or unlimited.
+ * @discussion This trial text is only used until either the localized trial text is set or until the trial text is
+ * updated to the remote configuration via `PADProduct refresh:`.
  */
 @property (copy, nullable) NSString *trialText;
+
+/**
+ * @brief Specifies the localised text displayed to the user of the application, explaining the trial policy of the product.
+ * @discussion The localized trial text only takes effect for products with a trial, either limited or unlimited.
+ * @discussion The localized trial text takes priority over the non-localized trial text and the remote trial text.
+ */
+@property (copy, nullable) NSString *localizedTrialText;
 
 /**
  * @brief The local file path of the product image. The image size must be at least 154x154 pixels.

@@ -208,6 +208,15 @@ typedef NS_ENUM(NSInteger, PADProductType) {
 @property (copy, nullable, nonatomic) NSString *trialText;
 
 /**
+ * @discussion Specifies the localized text displayed to the user of the application, explaining the trial policy of
+ * the product. This property is typically set by either the product configuration or set in the Paddle dashboard.
+ * @discussion The localized trial text only takes effect for products with a trial, either limited or unlimited.
+ * @discussion The localized trial text takes priority over the local and remote trial text. If you do not want this
+ * behaviour, please set this property to nil.
+ */
+@property (copy, nullable, nonatomic) NSString *localizedTrialText;
+
+/**
  * @discussion The date on which the user's trial began. This may be reset by calling resetTrial.
  * @discussion The trial start date is only recorded for products with a trial, either limited or unlimited.
  */

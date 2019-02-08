@@ -162,3 +162,7 @@
 "Send anonymous usage information?" = "匿名で使用情報を送信しますか？";
 "Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "本アプリケーションの改善のため、％@の開発者に匿名で使用情報を送信することをご希望ですか？";
 "%@ - Checkout" = "%@ - 精算";
+"Forgotten your license key?" = "ライセンスキーをお忘れの場合";
+"An Error Occurred" = "エラー発生";
+"An unexpected error occurred performing this action." = "この操作の実行中に予期しないエラーが発生しました。";
+"Whoops! Something went wrong." = "エラーが発生しました。";

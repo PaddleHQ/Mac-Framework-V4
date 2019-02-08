@@ -162,3 +162,7 @@
 "Send anonymous usage information?" = "Отправлять анонимную информацию об использовании?";
 "Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Хотели бы вы отправлять анонимные сведения об использовании разработчику %@, чтобы помочь улучшить приложение?";
 "%@ - Checkout" = "%@ - Расчет";
+"Forgotten your license key?" = "забыли свой лицензионный ключ?";
+"Whoops! Something went wrong." = "Ой! Что-то пошло не так.";
+"An unexpected error occurred performing this action." = "При выполнении этого действия произошла непредвиденная ошибка.";
+"An Error Occurred" = "Произошла ошибка";

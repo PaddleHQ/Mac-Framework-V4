@@ -162,3 +162,7 @@
 "Send anonymous usage information?" = "Wyślij anonimową informację o użytkowaniu?";
 "Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Czy chciałbyś wysłać anonimową informację o użytkowaniu do dewelopera %@ w celu poprawienia aplikacji?";
 "%@ - Checkout" = "%@ – kasa";
+"Forgotten your license key?" = "zapomniałeś klucza licencyjnego?";
+"Whoops! Something went wrong." = "Ups! Coś poszło nie tak.";
+"An unexpected error occurred performing this action." = "Podczas wykonywania tej operacji wystąpił nieoczekiwany błąd.";
+"An Error Occurred" = "Wystąpił błąd";

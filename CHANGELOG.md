@@ -1,3 +1,13 @@
+# 4.0.9
+
+New:
+- We no-longer do an automatic refresh of the `PADProduct` provided for `Paddle` initialization if that product has ever been refreshed before.
+- Additional property `localizedTrialText` on `PADProduct` and `PADProductConfiguration`, this allows the trial text shown in UI to be localized and not overrided by the remote value in the dashboard.
+- "Forgotten License" button added to activation UI to make it easier for end users to find the functionality without Seller intervention.
+
+Fixed:
+- Checkout T&Cs and privacy policy now open in the browser for easier reading.
+
 # 4.0.8
 
 New:

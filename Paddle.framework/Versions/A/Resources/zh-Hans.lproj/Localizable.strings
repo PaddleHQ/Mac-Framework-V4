@@ -162,3 +162,7 @@
 "Send anonymous usage information?" = "发送匿名使用信息？";
 "Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "您想给％@的开发人员发送匿名使用信息来帮助改进这个应用程序吗？";
 "%@ - Checkout" = "%@ - 结账";
+"Forgotten your license key?" = "忘记了授权码？";
+"Whoops! Something went wrong." = "哎呀！发生了一些错误。";
+"An unexpected error occurred performing this action." = "执行该操作时发生意外错误。";
+"An Error Occurred" = "发生了一个错误";

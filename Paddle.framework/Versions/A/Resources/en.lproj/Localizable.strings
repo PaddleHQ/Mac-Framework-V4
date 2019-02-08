@@ -20,6 +20,12 @@
 "Already purchased a license? Fill in the form below and activate %@ instantly." = "Already purchased a license? Fill in the form below and activate %@ instantly.";
 
 /* No comment provided by engineer. */
+"An Error Occurred" = "An Error Occurred";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "An unexpected error occurred performing this action.";
+
+/* No comment provided by engineer. */
 "Buy Now" = "Buy Now";
 
 /* No comment provided by engineer. */
@@ -119,6 +125,9 @@
 "Welcome to %@!" = "Welcome to %@!";
 
 /* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Whoops! Something went wrong.";
+
+/* No comment provided by engineer. */
 "Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Would you like to send anonymous usage information to the developer of %@ to help improve the application?";
 
 /* No comment provided by engineer. */
@@ -136,3 +145,4 @@
 /* No comment provided by engineer. */
 "Your order is being processed. You'll receive an email soon." = "Your order is being processed. You'll receive an email soon.";
 
+"Forgotten your license key?" = "Forgotten your license key?";

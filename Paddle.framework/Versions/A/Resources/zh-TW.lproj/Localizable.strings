@@ -161,3 +161,7 @@
 "Unable to deactivate license. Please try again later." = "無法停用授權。請稍後再試一次。";
 "Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "您是否要傳送匿名使用資訊給 %@ 的開發者，以協助改善這個應用程式？";
 "%@ - Checkout" = "%@ - 結帳";
+"Forgotten your license key?" = "忘記了你的授權金鑰？";
+"Whoops! Something went wrong." = "糟糕！發生錯誤。";
+"An unexpected error occurred performing this action." = "執行此動作時發生意外的錯誤。";
+"An Error Occurred" = "發生錯誤";

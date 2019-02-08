@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, PADErrorCode) {
     /**
      * @brief Specifies that the product appears to be unreleased or incomplete in the Paddle dashboard.
      * @discussion This error is generated when the product data is refreshed and the remote product data
-     * indicates that the product has been configured completely.
+     * indicates that the product has not been configured completely.
      */
     PADErrorUnreleasedProductFromAPI = -112,
 
