@@ -166,3 +166,33 @@
 "An Error Occurred" = "Se ha producido un error";
 "An unexpected error occurred performing this action." = "Ha ocurrido un error";
 "Whoops! Something went wrong." = "¡Vaya! Algo no ha ido bien.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Luego, %@/%ld días";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Posteriormente, %@/%ld meses";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Posteriormente, %@/%ld semanas";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Posteriormente, %@/%ld años";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Luego %@/día";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Luego %@/mes";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Luego %@/semana";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Luego %@/año";
+
+/* No comment provided by engineer. */
+"after %ld days" = "tras %ld días";
+
+/* No comment provided by engineer. */
+"after 1 day" = "tras 1 día";

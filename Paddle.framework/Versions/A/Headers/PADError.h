@@ -147,6 +147,12 @@ typedef NS_ENUM(NSInteger, PADErrorCode) {
      * is reported, the file will at least exist but may not be readable to the current app.
      */
     PADErrorV3LicenseFileFailure = -120,
+
+    /**
+     * @brief Specifies that we were unable to retrieve the localized pricing data for a product.
+     * @discussion This error may indicate network connectivity issues.
+     */
+    PADErrorUnableToFetchPricingData = -121,
 };
 
 /**

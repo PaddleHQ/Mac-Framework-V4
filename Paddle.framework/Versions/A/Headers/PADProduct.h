@@ -10,6 +10,11 @@
 @import Foundation;
 #import "PADProductConfiguration.h"
 
+// Forward declaration of the checkout data class.
+// Paddle.h defines this class, but also includes this header. Fortunately we don't
+// need the full details of the class at this point.
+@class PADCheckoutData;
+
 /**
  * @discussion The following constants describe the possible existing license types.
  */
@@ -151,6 +156,15 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  * user was able to deactivate the product.
  */
 - (void)productDeactivated;
+
+/**
+ * @brief The product has been succesfully purchased. The state of the checkout is equivalent to \c PADCheckoutPurchased.
+ * @discussion This method will be called if the checkout was successfully completed (not flagged
+ * and with full order data). If a completion block is provided to the \c showCheckoutForProduct:options:checkoutStatusCompletion:
+ * method and the checkout is successful, this method will still be called.
+ * @param checkoutData The parsed checkout and order data.
+ */
+- (void)productPurchased:(nonnull PADCheckoutData *)checkoutData;
 
 @end
 
@@ -351,6 +365,47 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  * @discussion If set to YES, when a trial has expired, using the product info Quit button will use exit(0); to force exit of your app
  */
 @property (nonatomic) BOOL canForceExit;
+
+#pragma mark - Properties for subscription products
+
+/**
+ * @brief The recurring price of the subscription product. As subscriptions do not have sale adjustments, it's always
+ * assumed that this price is a base price.
+ */
+@property (nonatomic, readonly, nullable) NSNumber *recurringBasePrice;
+
+/**
+ * @brief The length of the subscription product's plan. Combined with the subscription plan type,
+ * these properties describe how often the user is charged for the subscription.
+ * @discussion The plan length will only be used for subscription products, so make sure that you specify the
+ * subscription product type when initialising the product.
+ */
+@property (readonly) NSUInteger subscriptionPlanLength;
+
+/**
+ * @brief The type of the subscription product's plan. Combined with the subscription plan length,
+ * these properties describe how often the user is charged for the subscription.
+ * @discussion The plan type will only be used for subscription products, so make sure that you specify the
+ * subscription product type when initialising the product.
+ */
+@property (readonly) PADSubscriptionPlanType subscriptionPlanType;
+
+/**
+ * @brief The length of the subscription trial in days. If nil or 0, the subscription has no trial.
+ * @discussion The subscription trial length will only be used for subscription products, so make sure that you specify the
+ * subscription product type when initialising the product.
+ */
+@property (nullable, readonly) NSNumber *subscriptionTrialLength;
+
+/**
+ * @brief Whether free usage is prevented before purchasing the subscription plan. By default this property
+ * is YES and the product access dialog will display a "Quit" button to prevent further usage. If the
+ * property is NO, then the product access dialog will display a continue button to allow further usage.
+ * @discussion As implied by the name, this property will only be used for subscription products.
+ */
+@property (nonatomic) BOOL preventFreeUsageBeforeSubscriptionPurchase;
+
+#pragma mark - Methods
 
 /**
  * @discussion Initializes a PADProduct ready to be used in the SDK

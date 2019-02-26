@@ -166,3 +166,33 @@
 "An Error Occurred" = "Ein Fehler ist aufgetreten";
 "An unexpected error occurred performing this action." = "Bei der Ausführung dieser Aktion ist ein unerwarteter Fehler aufgetreten.";
 "Whoops! Something went wrong." = "Hoppla! Etwas ist schiefgelaufen.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Dann %@/%ld Tage";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Dann %@/%ld Monate";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Dann %@/%ld Wochen";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Dann %@/%ld Jahre";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Danach %@/Tag";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Danach %@/Monat";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Danach %@/Woche";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Danach %@/Jahr";
+
+/* No comment provided by engineer. */
+"after %ld days" = "nach %ld Tagen";
+
+/* No comment provided by engineer. */
+"after 1 day" = "nach 1 Tag";

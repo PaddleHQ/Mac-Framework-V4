@@ -166,3 +166,33 @@
 "An Error Occurred" = "エラー発生";
 "An unexpected error occurred performing this action." = "この操作の実行中に予期しないエラーが発生しました。";
 "Whoops! Something went wrong." = "エラーが発生しました。";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "その後、%@/%ld日";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "それ以降 %@/%ld ヶ月ごと";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "それ以降 %@/%ld 週間ごと";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "それ以降 %@/%ld 年ごと";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "その後 %@/日";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "その後 %@/月";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "その後 %@/週";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "その後 %@/年";
+
+/* No comment provided by engineer. */
+"after %ld days" = "%ld 日後";
+
+/* No comment provided by engineer. */
+"after 1 day" = "1日後";

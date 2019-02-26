@@ -31,6 +31,34 @@ typedef NS_ENUM(NSInteger, PADProductTrialType) {
 };
 
 /**
+ * @brief The following constants describe the possible subscription plan types. Together with the
+ * subscription plan length, it describes how often the user is charged for their subscription.
+ * @discussion The Paddle SDK does not charge the user on this recurring basis. This is handled by
+ * the Paddle payment system. The SDK only enables the user to subscribe to the subscription.
+ */
+typedef NS_ENUM(NSInteger, PADSubscriptionPlanType) {
+    /**
+     * @brief Specifies that the subscription is charged every year or every n years.
+     */
+    PADSubscriptionPlanYear,
+
+    /**
+     * @brief Specifies that the subscription is charged every month or every n months.
+     */
+    PADSubscriptionPlanMonth,
+
+    /**
+     * @brief Specifies that the subscription is charged every week or every n weeks.
+     */
+    PADSubscriptionPlanWeek,
+
+    /**
+     * @brief Specifies that the subscription is charged daily or every n days.
+     */
+    PADSubscriptionPlanDay,
+};
+
+/**
  * @discussion PADProductConfiguration represents the configuration of
  * a product for the first launch of the app, before we are able to retrieve
  * the remote configuration of the product.
@@ -100,9 +128,50 @@ typedef NS_ENUM(NSInteger, PADProductTrialType) {
 @property (nonatomic, nullable) NSNumber *price;
 
 /**
- * @brief The currency of the product.
+ * @brief The currency of the product prices: base, current and recurring.
  * @discussion The currency should be in the ISO 4217 format.
  */
 @property (copy, nullable) NSString *currency;
+
+#pragma mark - Properties for subscription products
+
+/**
+ * @brief The recurring base price of the subscription product in the specified currency. All prices share the same
+ * currency.
+ * @discussion This property will be stored on the subscription product, if set. It will then be used
+ * in the product access dialog to describe the recurring charge to the user.
+ * @discussion The recurring price will only be used for subscription products, so make sure that you specify the
+ * subscription product type when initialising the product.
+ */
+@property (nonatomic, nullable) NSNumber *recurringPrice;
+
+/**
+ * @brief The length of the subscription product's plan. Combined with the subscription plan type,
+ * these properties describe how often the user is charged for the subscription.
+ * @discussion This property will be stored on the subscription product, if set. It will then be used
+ * in the product access dialog to describe the recurring charge to the user.
+ * @discussion The plan length will only be used for subscription products, so make sure that you specify the
+ * subscription product type when initialising the product.
+ */
+@property NSUInteger subscriptionPlanLength;
+
+/**
+ * @brief The type of the subscription product's plan. Combined with the subscription plan length,
+ * these properties describe how often the user is charged for the subscription.
+ * @discussion This property will be stored on the subscription product, if set. It will then be used
+ * in the product access dialog to describe the recurring charge to the user.
+ * @discussion The plan type will only be used for subscription products, so make sure that you specify the
+ * subscription product type when initialising the product.
+ */
+@property PADSubscriptionPlanType subscriptionPlanType;
+
+/**
+ * @brief The length of the subscription trial in days. If nil or 0, the subscription has no trial.
+ * @discussion This property will be stored on the subscription product, if set. It will then be used
+ * in the product access dialog to describe the recurring charge to the user.
+ * @discussion The subscription trial length will only be used for subscription products, so make sure that you specify the
+ * subscription product type when initialising the product.
+ */
+@property (nullable) NSNumber *subscriptionTrialLength;
 
 @end

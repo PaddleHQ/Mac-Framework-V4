@@ -166,3 +166,33 @@
 "An Error Occurred" = "Si è verificato un errore";
 "An unexpected error occurred performing this action." = "Si è verificato un errore inatteso durante l'esecuzione di questa azione.";
 "Whoops! Something went wrong." = "Ops! Qualcosa è andato storto.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "In seguito, %@ ogni %ld giorni";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Poi %@/%ld mesi";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Poi %@/%ld settimane";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Poi %@/%ld anni";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Poi %@/giorno";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Poi %@/mese";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Poi %@/settimana";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Poi %@/anno";
+
+/* No comment provided by engineer. */
+"after %ld days" = "dopo %ld giorni";
+
+/* No comment provided by engineer. */
+"after 1 day" = "dopo 1 giorno";

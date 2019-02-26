@@ -166,3 +166,33 @@
 "Whoops! Something went wrong." = "哎呀！发生了一些错误。";
 "An unexpected error occurred performing this action." = "执行该操作时发生意外错误。";
 "An Error Occurred" = "发生了一个错误";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "此后为 %@/%ld 天";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "此后为 %@/%ld 月";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "此后为 %@/%ld 周";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "此后为 %@/%ld 年";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "然后 %@/天";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "然后 %@/月";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "然后 %@/星期";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "然后 %@/年";
+
+/* No comment provided by engineer. */
+"after %ld days" = "在 %ld 天后";
+
+/* No comment provided by engineer. */
+"after 1 day" = "在 1 天后";

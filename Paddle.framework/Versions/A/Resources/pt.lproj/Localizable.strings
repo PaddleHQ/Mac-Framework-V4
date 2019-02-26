@@ -166,3 +166,33 @@
 "Whoops! Something went wrong." = "Ups! Algo correu mal.";
 "An unexpected error occurred performing this action." = "Ocorreu um erro inesperado ao realizar esta ação.";
 "An Error Occurred" = "Ocorreu um erro";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Depois, %@/%ld dias";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Depois, %@/%ld meses";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Depois, %@/%ld semanas";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Depois, %@/%ld anos";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Depois, %@/dia";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Depois, %@/mês";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Depois, %@/semana";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Depois, %@/ano";
+
+/* No comment provided by engineer. */
+"after %ld days" = "após %ld dias";
+
+/* No comment provided by engineer. */
+"after 1 day" = "após 1 dia";

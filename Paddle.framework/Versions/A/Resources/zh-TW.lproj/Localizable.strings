@@ -165,3 +165,33 @@
 "Whoops! Something went wrong." = "糟糕！發生錯誤。";
 "An unexpected error occurred performing this action." = "執行此動作時發生意外的錯誤。";
 "An Error Occurred" = "發生錯誤";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Then %@/%ld days";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Then %@/%ld months";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Then %@/%ld weeks";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Then %@/%ld years";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Then %@/day";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Then %@/month";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Then %@/week";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Then %@/year";
+
+/* No comment provided by engineer. */
+"after %ld days" = "after %ld days";
+
+/* No comment provided by engineer. */
+"after 1 day" = "after 1 day";

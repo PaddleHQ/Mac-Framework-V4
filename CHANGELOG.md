@@ -1,3 +1,14 @@
+# 4.0.10
+
+New:
+- `PADProductDelegate` has a new method of `productPurchased:` which is called when the checkout completes with `PADCheckoutPurchased`.
+- Product Access Dialog now supports `PADProduct`s that are Subscription Plans.
+- New error code for an invalid API Key `PADAPIErrorBadAPIKey`
+- `PADProduct` now has additional Subscription Plan relevant properties such as the recurring price, plan length, etc.
+
+Fixed:
+- `PADProduct` License expiry date not being populated.
+
 # 4.0.9
 
 New:

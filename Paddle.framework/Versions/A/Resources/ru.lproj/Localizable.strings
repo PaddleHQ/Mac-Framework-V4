@@ -166,3 +166,33 @@
 "Whoops! Something went wrong." = "Ой! Что-то пошло не так.";
 "An unexpected error occurred performing this action." = "При выполнении этого действия произошла непредвиденная ошибка.";
 "An Error Occurred" = "Произошла ошибка";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Затем %@ в %ld дней";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Затем %@ в %ld месяцев";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Затем %@ в %ld недель";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Затем %@ в %ld лет";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "затем %@/день";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Затем %@/месяц";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Затем %@/неделю";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Затем %@/год";
+
+/* No comment provided by engineer. */
+"after %ld days" = "после %ld дн.";
+
+/* No comment provided by engineer. */
+"after 1 day" = "через 1 день";
