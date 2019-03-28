@@ -7,7 +7,7 @@
 //  Copyright © 2018 Paddle. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 /**
  * @brief The following constants describe the possible types of trial of a product.
@@ -68,8 +68,8 @@ typedef NS_ENUM(NSInteger, PADSubscriptionPlanType) {
 /**
  * @brief Initialise a new product configuration object with the product and vendor name.
  */
-+ (instancetype)configuration:(nonnull NSString *)productName
-                   vendorName:(nonnull NSString *)vendorName;
++ (nullable instancetype)configuration:(nonnull NSString *)productName
+                            vendorName:(nonnull NSString *)vendorName;
 
 /**
  * @discussion The name of the product. This property is typically shown to users of the application.

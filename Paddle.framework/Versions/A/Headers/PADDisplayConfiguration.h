@@ -77,4 +77,10 @@ typedef NS_ENUM(NSInteger, PADDisplayType) {
                  hideNavigationButtons:(BOOL)hideNavigationButtons
                           parentWindow:(NSWindow *_Nullable)parentWindow;
 
+/**
+ * @discussion Initialize a new display configuration with the custom display type. The other
+ * options are not used as this display type requires you to show the dialog with custom UI elements.
+ */
++ (nullable instancetype)displayCustom;
+
 @end

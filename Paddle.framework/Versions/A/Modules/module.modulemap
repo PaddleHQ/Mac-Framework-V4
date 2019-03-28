@@ -7,6 +7,5 @@ framework module Paddle {
     header "PADProductConfiguration.h"
     header "PADDisplayConfiguration.h"
     header "PADPriceOverride.h"
-    header "PaddleAnalyticsKit.h"
     export *
 }

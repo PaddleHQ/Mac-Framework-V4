@@ -103,6 +103,6 @@
 /**
  * @brief Create an empty checkout options object.
  */
-+ (instancetype)options;
++ (nullable instancetype)options;
 
 @end

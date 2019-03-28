@@ -7,8 +7,8 @@
 //  Copyright © 2018 Paddle. All rights reserved.
 //
 
-@import Foundation;
 #import "PADProductConfiguration.h"
+#import <Foundation/Foundation.h>
 
 // Forward declaration of the checkout data class.
 // Paddle.h defines this class, but also includes this header. Fortunately we don't
@@ -131,7 +131,8 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  *
  * @return BOOL to indicate if the license should be migrated to v4
  */
-- (BOOL)shouldMigrateExistingV3License:(NSString *)productId type:(PADExistingLicenseType)existingLicenseType;
+- (BOOL)shouldMigrateExistingV3License:(nonnull NSString *)productId
+                                  type:(PADExistingLicenseType)existingLicenseType;
 
 /**
  * @brief The product for ID has been migrated from v3 to v4
@@ -139,7 +140,8 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  * @param productId An NSString containing the productId of the product license that was migrated.
  * @param existingLicenseType a PADExistingLicenseType ENUM indicating the type of license migrated
  */
-- (void)v3LicenseMigrated:(NSString *)productId type:(PADExistingLicenseType)existingLicenseType;
+- (void)v3LicenseMigrated:(nonnull NSString *)productId
+                     type:(PADExistingLicenseType)existingLicenseType;
 
 /**
  * @brief The product has been activated successfully.
@@ -469,8 +471,8 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  * The completion handler is given a BOOL to indicate if the activation was successful and
  * an error if it was not successful.
  */
-- (void)activateEmail:(NSString *)email
-              license:(NSString *)license
+- (void)activateEmail:(nonnull NSString *)email
+              license:(nonnull NSString *)license
            completion:(nullable void (^)(BOOL activated, NSError *_Nullable error))completion;
 
 /**

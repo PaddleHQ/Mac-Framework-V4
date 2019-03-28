@@ -205,6 +205,15 @@ typedef NS_ENUM(NSInteger, PADCheckoutState) {
  */
 @property (nullable) NSString *redirectURL;
 
+/**
+ * @brief An array of license codes for the subscription, if any.
+ */
+#if MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_10
+@property (nullable) NSArray<NSString *> *subscriptionLicenseCodes;
+#else
+@property (nullable) NSArray *subscriptionLicenseCodes;
+#endif
+
 @end
 
 /**

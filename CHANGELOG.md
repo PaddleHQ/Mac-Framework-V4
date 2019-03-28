@@ -1,3 +1,15 @@
+# 4.0.11
+
+New:
+- Preliminary support for Paddle subscription licensing.
+- Removed Seller App Analytics (analytics.paddle.com) as no-longer supported.
+- Added Dutch localizations.
+
+Fixed:
+- Crash on JSON Serializer receiving `nil`.
+- Custom display type now allows the Seller to do their own UI.
+- Crash on `PADInternalAnalyticsEvent` receiving `nil`.
+
 # 4.0.10
 
 New:
