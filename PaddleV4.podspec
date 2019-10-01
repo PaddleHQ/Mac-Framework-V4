@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "PaddleV4"
-  s.version = "4.0.11"
+  s.version = "4.0.13"
   s.summary     = "A licensing framework for OS X"
   s.description = "Paddle is an easy to use licensing framework for OS X including App Licensing and In App Purchases."
   s.homepage    = "https://www.paddle.com"
@@ -8,19 +8,15 @@ Pod::Spec.new do |s|
     :type => 'MIT',
     :text => <<-LICENSE
 The MIT License (MIT)
-
 Copyright (c) 2018 Paddle
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -36,7 +32,7 @@ SOFTWARE.
   }
 
   s.platform = :osx, '10.10'
-  s.source   = { :http => "https://s3.amazonaws.com/paddle-production-sdk-releases/macOS/v4/4.0.11/macOS-sdk-v4.0.11.zip" }
+  s.source   = { :http => "https://s3.amazonaws.com/paddle-production-sdk-releases/macOS/v4/4.0.13/macOS-sdk-v4.0.13.zip" }
 
   s.vendored_framework  = 'Paddle.framework'
   s.requires_arc        = false

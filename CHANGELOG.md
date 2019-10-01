@@ -1,3 +1,12 @@
+# 4.0.13
+New:
+- Added a specific error message when the number of activations for a license runs out.
+- Our SDK now understands that sometimes people enter licenses with spaces.
+- Added the ability to use your own custom license path.
+
+Fixed:
+- Catalina lost license issue
+
 # 4.0.11
 
 New:
