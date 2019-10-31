@@ -1,3 +1,9 @@
+# 4.0.14
+
+Fixed:
+- Users being asked to enter the license every time they open the app. Depending on the implementation there was a scenario where changes to a license file wouldn't save (depending on the thread it was on) as it could be locked by another thread. Eg calling refresh inside the completion of verify.
+- APP crashes on activation when offline or API is unavailable. 
+
 # 4.0.13
 New:
 - Added a specific error message when the number of activations for a license runs out.
