@@ -1,3 +1,15 @@
+# 4.0.15
+
+- Memory leaks.
+- Deprecated convertPointToBase: in class NSView.
+- Added parameters definitions to remove warnings in non-ARC projects.
+- Removed unnecessary LLVM instrumentation causing it to write unnecessary default.profraw files.
+- License verification race condition issue when offline, this was causing the callbacks to return `.unverified` instead of `.unableToVerify.
+- Incorrect error being passed when
+   - More than one error was present
+   - A default error would be shown when one was incorrectly caught from the API
+- License expiration date was being ignored on activation for licenses with a set expiration date, this caused expired licenses to be successfully activated. Please note that those licenses would then fail license verification verifyActivationWithCompletion. This has now been fixed for all versions of the SDK as the validation is done at API level.
+
 # 4.0.14
 
 Fixed:
