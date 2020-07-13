@@ -91,17 +91,17 @@ typedef NS_ENUM(NSInteger, PADProductType) {
  * @discussion The activation date may be nil, as it was not always captured in previous
  * versions of the v3 Paddle SDK.
  */
-@property (strong, nullable) NSDate *activationDate;
+@property (nullable) NSDate *activationDate;
 
 /**
  * @brief The activated license code.
  */
-@property (copy, nonnull) NSString *license;
+@property (nonnull) NSString *license;
 
 /**
  * @brief The email that was used to activate the license.
  */
-@property (copy, nonnull) NSString *activationEmail;
+@property (nonnull) NSString *activationEmail;
 
 @end
 
