@@ -36,7 +36,7 @@ SOFTWARE.
   }
 
   s.platform = :osx, '10.10'
-  s.source   = { :http => "https://s3.amazonaws.com/paddle-production-sdk-releases/macOS/v4/4.0.15/macOS-sdk-v4.0.16.zip" }
+  s.source   = { :http => "https://github.com/PaddleHQ/Mac-Framework-V4/archive/v4.0.16.zip" }
 
   s.vendored_framework  = 'Paddle.framework'
   s.requires_arc        = false
