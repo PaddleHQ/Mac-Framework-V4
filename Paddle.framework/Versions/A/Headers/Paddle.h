@@ -101,32 +101,32 @@ typedef NS_ENUM(NSInteger, PADCheckoutState) {
 /**
  * @brief The identifier of the locker.
  */
-@property (nullable) NSString *lockerID;
+@property (nullable, copy) NSString *lockerID;
 
 /**
  * @brief The identifier of the product.
  */
-@property (nullable) NSString *productID;
+@property (nullable, copy) NSString *productID;
 
 /**
  * @brief The name of the product.
  */
-@property (nullable) NSString *productName;
+@property (nullable, copy) NSString *productName;
 
 /**
  * @brief The URL where the product is hosted.
  */
-@property (nullable) NSString *downloadURL;
+@property (nullable, copy) NSString *downloadURL;
 
 /**
  * @brief The license code assigned to the buyer.
  */
-@property (nullable) NSString *licenseCode;
+@property (nullable, copy) NSString *licenseCode;
 
 /**
  * @brief The download instructions.
  */
-@property (nullable) NSString *instructions;
+@property (nullable, copy) NSString *instructions;
 
 @end
 
@@ -138,37 +138,37 @@ typedef NS_ENUM(NSInteger, PADCheckoutState) {
 /**
  * @brief The identifier of the order.
  */
-@property (nullable) NSString *orderID;
+@property (nullable, copy) NSString *orderID;
 
 /**
  * @brief The 3-character identifier of the order's currency.
  */
-@property (nullable) NSString *currency;
+@property (nullable, copy) NSString *currency;
 
 /**
  * @brief The total amount of the checkout that was paid.
  */
-@property (nullable) NSString *total;
+@property (nullable, copy) NSString *total;
 
 /**
  * @brief The total amount of checkout, formatted as it was displayed on the checkout.
  */
-@property (nullable) NSString *formattedTotal;
+@property (nullable, copy) NSString *formattedTotal;
 
 /**
  * @brief The date and time on which the checkout was completed, as a string.
  */
-@property (nullable) NSString *completionDate;
+@property (nullable, copy) NSString *completionDate;
 
 /**
  * @brief The identifier of the timezone of the completion date.
  */
-@property (nullable) NSString *completionDateTimezone;
+@property (nullable, copy) NSString *completionDateTimezone;
 
 /**
  * @brief The URL of the order receipt.
  */
-@property (nullable) NSString *receiptURL;
+@property (nullable, copy) NSString *receiptURL;
 
 /**
  * @brief Indicates that the order has 1 or more lockers.
@@ -188,22 +188,22 @@ typedef NS_ENUM(NSInteger, PADCheckoutState) {
 /**
  * @brief The coupon code of the checkout, if any.
  */
-@property (nullable) NSString *couponCode;
+@property (nullable, copy) NSString *couponCode;
 
 /**
  * @brief The formatted tax total.
  */
-@property (nullable) NSString *formattedTax;
+@property (nullable, copy) NSString *formattedTax;
 
 /**
  * @brief The total tax amount.
  */
-@property (nullable) NSString *totalTax;
+@property (nullable, copy) NSString *totalTax;
 
 /**
  * @brief The redirect URL of the checkout, if any.
  */
-@property (nullable) NSString *redirectURL;
+@property (nullable, copy) NSString *redirectURL;
 
 /**
  * @brief An array of license codes for the subscription, if any.
@@ -230,45 +230,45 @@ typedef NS_ENUM(NSInteger, PADCheckoutState) {
  * property. There may be new properties that are not yet reflected in the \c PADCheckoutData
  * structure.
  */
-@property (nullable) NSDictionary *responseData;
+@property (nullable, strong) NSDictionary *responseData;
 
 /**
  * @brief The current state of the checkout.
  */
-@property (nullable) NSString *state;
+@property (nullable, copy) NSString *state;
 
 /**
  * @brief The email address of the buyer.
  */
-@property (nullable) NSString *buyerEmail;
+@property (nullable, copy) NSString *buyerEmail;
 
 /**
  * @brief The identifier of the checkout.
  */
-@property (nullable) NSString *checkoutID;
+@property (nullable, copy) NSString *checkoutID;
 
 /**
  * @brief The URL of the icon image used on the checkout.
  */
-@property (nullable) NSString *imageURL;
+@property (nullable, copy) NSString *imageURL;
 
 /**
  * @brief The title used on the checkout.
  */
-@property (nullable) NSString *title;
+@property (nullable, copy) NSString *title;
 
 /**
  * @brief The order data of the completed checkout.
  */
-@property (nullable) PADCheckoutOrderData *orderData;
+@property (nullable, strong) PADCheckoutOrderData *orderData;
 
 /**
  * @brief An array of \c PADCheckoutLockerData objects.
  */
 #if MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_10
-@property (nullable) NSArray<PADCheckoutLockerData *> *lockers;
+@property (nullable, strong) NSArray<PADCheckoutLockerData *> *lockers;
 #else
-@property (nullable) NSArray *lockers;
+@property (nullable, strong) NSArray *lockers;
 #endif
 
 @end

@@ -1,3 +1,8 @@
+# 4.0.17
+This release is compatible with the new MacOS - Big Sur.
+
+Please note that this build does not work on Apple Silicon machines, as the current Xcode GM does not include the ability to build for Apple Silicon just yet. If you have Apple's Developer Transition Kit (DTK) and wish to start testing it please reach out to support@paddle.com. The team will be able to provide you with the current universal beta build and add you to the test list so you can continue to receive our latest betas when a new one is released.
+
 # 4.0.16
 - Fixed the issue introduced on the last release that was causing trial days to default to zero.
 
