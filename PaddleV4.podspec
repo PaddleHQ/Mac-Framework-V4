@@ -31,13 +31,11 @@ SOFTWARE.
     LICENSE
   }
   s.authors     = {
-    'Louis Harwood' => 'louis@paddle.com',
-    'Maarten Jacobs' => 'maarten@paddle.com'
+    'Louis Harwood' => 'louis@paddle.com'
   }
 
   s.platform = :osx, '10.10'
   s.source   = { :http => "https://github.com/PaddleHQ/Mac-Framework-V4/archive/v4.0.17.zip" }
-
   s.vendored_framework  = 'Mac-Framework-V4-4.0.17/Paddle.framework'
   s.requires_arc        = false
   s.framework           = 'WebKit';
