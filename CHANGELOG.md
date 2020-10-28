@@ -1,3 +1,7 @@
+# 4.0.18
+Fixed a bug introduced on the last release that was causing trial days to default to zero.
+In scenarios where API requests fail, the default product configuration object was not being used, resulting in a non existing trial object and causing the SDK to default to trial expired.
+
 # 4.0.17
 This release is compatible with the new MacOS - Big Sur.
 
