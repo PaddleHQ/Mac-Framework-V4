@@ -1,3 +1,6 @@
+# 4.1.0
+A universal binary that runs natively on both Apple silicon(M1) and Intel-based Mac computers.
+
 # 4.0.18
 Fixed a bug introduced on the last release that was causing trial days to default to zero.
 In scenarios where API requests fail, the default product configuration object was not being used, resulting in a non existing trial object and causing the SDK to default to trial expired.
