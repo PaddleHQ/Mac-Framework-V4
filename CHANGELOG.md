@@ -1,3 +1,14 @@
+# 4.1.1
+- Support for sandbox environment added (but not subscriptions)
+- Tested and updated for macOS Monterey.
+- Improved memory leaks.
+- Stopped the SDK from generating .profraw/coverage files for certain scenarios.
+- Improved Paddle’s Checkout caching behaviour to prevent future issues with paddle.js updates.
+
+If you don’t have a sandbox account yet, you can create one at https://sandbox-vendors.paddle.com/signup.
+To use the sandbox environment on the SDK you will need to use `[Paddle setEnvironmentToSandbox];` method before calling any `startLicensing` methods, preferably in `applicationDidFinishLaunching:` and change the vendor id, product id and key to the sandbox values.
+Please note that the sandbox only works with one-off SDK products, it does not work with subscription licensing.
+
 # 4.1.0
 A universal binary that runs natively on both Apple silicon(M1) and Intel-based Mac computers.
 
