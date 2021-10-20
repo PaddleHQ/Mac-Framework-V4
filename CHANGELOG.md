@@ -1,3 +1,9 @@
+# 4.2.0
+Apart from making sure our Mac SDK is ready for the new macOS we’ve also made the following improvements:
+- Added allowed_uses and times_used to the license verification response, making it easier to see the user’s remaining activations.
+- Improved the activation error handling to display more accurate activation errors.
+- Improved core headers.
+
 # 4.1.1
 - Support for sandbox environment added (but not subscriptions)
 - Tested and updated for macOS Monterey.
