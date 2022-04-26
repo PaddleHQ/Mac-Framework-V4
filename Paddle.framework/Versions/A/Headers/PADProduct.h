@@ -488,6 +488,22 @@ typedef NS_ENUM(NSInteger, PADProductType) {
            completion:(nullable void (^)(BOOL activated, NSError *_Nullable error))completion;
 
 /**
+ * @discussion Activate the current product with additional details returned
+ * @discussion If no completion handler is given, then the error is passed to the delegate, if the delegate
+ * is set and it responds to `paddleDidError:`.
+ *
+ * @param email An NSString containing the email address of the user for the activation
+ * @param license an NSString containing the license code to be used for the activation
+ * @param completion The completion handler to call when the product has been activated.
+ * This handler is executed on the main dispatch queue, but it may not be executed asynchronously.
+ * The completion handler is given a BOOL to indicate if the activation was successful and
+ * an error if it was not successful.
+ */
+- (void)activateDetailsWithEmail:(nonnull NSString *)email
+              license:(nonnull NSString *)license
+           completion:(nullable void (^)(BOOL activated, NSError *_Nullable error, NSDictionary * _Nullable activationData))completion;
+
+/**
  * @discussion Reset the trial for this product
  */
 - (void)resetTrial;

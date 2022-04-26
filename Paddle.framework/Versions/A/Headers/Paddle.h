@@ -445,6 +445,13 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
  */
 - (nullable NSString *)customStoragePath;
 
+/**
+* @brief Optionally set a custom UUID to identify this machine.
+* @discussion You are responsible for ensuring this identifier stays the same for this machine. This is used for license activation and verification.
+* @return An NSString of the UUID
+*/
+- (nullable NSString *)customUUID;
+
 @end
 
 @class PADProductWindowController;

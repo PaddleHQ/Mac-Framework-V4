@@ -166,6 +166,10 @@ typedef NS_ENUM(NSInteger, PADErrorCode) {
     PADErrorInvalidEmail = -125,
     
     PADErrorTooManyActivationsOrExpired = -126,
+    
+    PADErrorUUIDNotMatched = -127,
+    
+    PADErrorSlowProcessing = -128,
 };
 
 /**
@@ -225,5 +229,10 @@ typedef NS_ENUM(NSInteger, PADAPIErrorCode) {
     /**
      * @discussion Specifies that the license has expired.
      */
-    PADAPIErrorLicenseExpired = 140
+    PADAPIErrorLicenseExpired = 140,
+    
+    /**
+     * @discussion Specifies that the machine identifier does not match the activation
+     */
+    PADAPIErrorUUIDNotMached = 144
 };

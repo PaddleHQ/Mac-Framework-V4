@@ -1,3 +1,17 @@
+# 4.3.0
+This release contains bugs fixes and much-needed improvements which are listed below:
+- Switched to WKWebView.
+- Removed all semantic warnings.
+- Added activation details (`allowed_uses`, `times_used`) to activation calls. This is now on both the activation and verification calls.
+- Added error handling on modified properties on the `PADProduct` object.
+- Silent activation is now correctly returning errors when used in Swift.
+- The Checkout is now returning `PADCheckoutSlowOrderProcessing` state in the completion block for all slow processing orders.
+- License verification improvements:
+   * Added further checks to obtain the correct machine UUID/MAC address, to help prevent activation issues for certain edge cases.
+   * Added a machine UUID error (`-127 “Identifier doesn't match activation”`) for when license verification fails due to the UUID being different from the activation one. This is to help identify more easily when users are trying to activate it on a new machine after migrating to a new one or to make it easy to identify edge cases where the machine’s UUID keeps changing.
+   * Added a custom UUID delegate method to allow customization of the user’s machine identifier.
+
+
 # 4.2.0
 Apart from making sure our Mac SDK is ready for the new macOS we’ve also made the following improvements:
 - Added allowed_uses and times_used to the license verification response, making it easier to see the user’s remaining activations.
