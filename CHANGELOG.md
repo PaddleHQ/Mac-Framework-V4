@@ -1,3 +1,6 @@
+# 4.3.1
+Fixed: Prevented verify methods from crashing for particular scenarios when no internet connection was available.
+
 # 4.3.0
 This release contains bugs fixes and much-needed improvements which are listed below:
 - Switched to WKWebView.
