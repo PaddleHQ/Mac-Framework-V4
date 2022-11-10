@@ -550,6 +550,15 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
 - (void)showProductAccessDialogWithProduct:(nonnull PADProduct *)product;
 
 /**
+ * @discussion Show a Product Information Dialog, with options to start a checkout or enter a license code
+ *
+ * @param product A PADProduct object for the Paddle product you wish to be shown
+ * @param displayConfiguration a PADDisplayConfiguration object used to change how the display is configured. Will be overridden by the corresponding delegate method if used
+ */
+- (void)showProductAccessDialogWithProduct:(nonnull PADProduct *)product
+                      displayConfiguration:(nullable PADDisplayConfiguration *)displayConfiguration;
+
+/**
  * @discussion Show UI for user to activate a license code.
  *
  * @param product A PADProduct object for the Paddle product you wish to activate a license for
@@ -563,6 +572,24 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
 - (void)showLicenseActivationDialogForProduct:(nonnull PADProduct *)product
                                         email:(nullable NSString *)email
                                   licenseCode:(nullable NSString *)licenseCode
+                   activationStatusCompletion:(nullable PADActivationStatusCompletion)activationStatusCompletion;
+
+/**
+ * @discussion Show UI for user to activate a license code.
+ *
+ * @param product A PADProduct object for the Paddle product you wish to activate a license for
+ * @param email An optional email to prefill the email field of the activation dialog. If the product has been
+ * activated, this parameter will be ignored.
+ * @param licenseCode An optional license code to prefill the license code field of the activation dialog. If the
+ * product has been activated, this parameter will be ignored.
+ * @param displayConfiguration a PADDisplayConfiguration object used to change how the display is configured. Will be overridden by the corresponding delegate method if used
+ * @param activationStatusCompletion A completion block to be called when an action has been attempted on the activation dialog.
+ * The completion block is called on the main dispatch queue.
+ */
+- (void)showLicenseActivationDialogForProduct:(nonnull PADProduct *)product
+                                        email:(nullable NSString *)email
+                                  licenseCode:(nullable NSString *)licenseCode
+                         displayConfiguration:(nullable PADDisplayConfiguration *)displayConfiguration
                    activationStatusCompletion:(nullable PADActivationStatusCompletion)activationStatusCompletion;
 
 #pragma mark-- Checkout
@@ -589,6 +616,32 @@ typedef NS_ENUM(NSInteger, PADTriggeredUIType) {
  */
 - (void)showCheckoutForProduct:(nonnull PADProduct *)product
                        options:(nullable PADCheckoutOptions *)options
+      checkoutStatusCompletion:(nullable PADCheckoutStateCompletion)checkoutStatusCompletion;
+
+/**
+ * @brief Show a dialog for a user to purchase a Paddle product.
+ *
+ * @discussion The completion handler is passed the state of the checkout and, if available, relevant data.
+ * The data is a dictionary with 2 top-level keys, both are optional and may be omitted: "checkout" and "order".
+ * The "checkout" key, if included, is a dictionary with 2 keys: "checkout_id" and "email"; the checkout ID is
+ * always included and is the ID of the checkout as is visible in the URL of a loaded checkout, and the email is
+ * the buyer's email. The "order" key, if included, is a dictionary with the full response from Paddle's order
+ * information API. Please refer to Paddle’s order information API for an example of the response. Note that the
+ * "state" will always be "processed".
+ *
+ * @discussion Unlike the product access and license activation dialogs, the checkout dialog cannot be prevented
+ * from showing. The reason for this is that the other dialogs can be replicated relatively easily, whereas the
+ * checkout dialog is quite complex. Hence we do not recommend or enable creating a custom checkout dialog.
+ *
+ * @param product A PADProduct object for the Paddle product you wish to purchase.
+ * @param options A PADCheckoutOptions object used to change the behaviour of the checkout.
+ * @param displayConfiguration a PADDisplayConfiguration object used to change how the display is configured. Will be overridden by the corresponding delegate method if used
+ * @param checkoutStatusCompletion A completion block to be called when an action has been attempted on the checkout dialog.
+ * The completion block is called on the main dispatch queue.
+ */
+- (void)showCheckoutForProduct:(nonnull PADProduct *)product
+                       options:(nullable PADCheckoutOptions *)options
+          displayConfiguration:(nullable PADDisplayConfiguration *)displayConfiguration
       checkoutStatusCompletion:(nullable PADCheckoutStateCompletion)checkoutStatusCompletion;
 
 #pragma mark-- License Recovery

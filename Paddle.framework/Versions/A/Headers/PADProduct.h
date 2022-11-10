@@ -504,6 +504,36 @@ typedef NS_ENUM(NSInteger, PADProductType) {
            completion:(nullable void (^)(BOOL activated, NSError *_Nullable error, NSDictionary * _Nullable activationData))completion;
 
 /**
+ * @discussion Get all activations for this product and license code
+ * @discussion If no completion handler is given, then the error is passed to the delegate, if the delegate
+ * is set and it responds to `paddleDidError:`.
+ * @discussion If no license code is passed then the currently activated (if any) license code for this product will be used
+ *
+ * @param completion The completion handler to call when the array of activations is returned.
+ * This handler is executed on the main dispatch queue, but it may not be executed asynchronously.
+ * The completion handler is given an NSArray containing the activations, and an error
+ * if the request was not successful.
+ */
+- (void)activationsForLicense:(nullable NSString *)license
+                   completion:(nullable void (^)(NSArray *_Nullable activations, NSError *_Nullable error))completion;
+
+/**
+ * @discussion Deactivate the given activation for the current product
+ * @discussion If no completion handler is given, then the error is passed to the delegate, if the delegate
+ * is set and it responds to `paddleDidError:`.
+ *
+ * @param activationId an NSString containing the activationId to be deactivated
+ * @param license an NSString containing the license code to be used for the deactivation
+ * @param completion The completion handler to call when the deactivation has been completed.
+ * This handler is executed on the main dispatch queue, but it may not be executed asynchronously.
+ * The completion handler is given a BOOL to indicate if the deactivation was successful, and an error
+ * if the deactivation was not successful.
+ */
+- (void)deactivateActivation:(nonnull NSString *)activationId
+                     license:(nonnull NSString *)license
+                  completion:(nullable void (^)(BOOL deactivated, NSError *_Nullable error))completion;
+
+/**
  * @discussion Reset the trial for this product
  */
 - (void)resetTrial;

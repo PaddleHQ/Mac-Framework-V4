@@ -170,6 +170,10 @@ typedef NS_ENUM(NSInteger, PADErrorCode) {
     PADErrorUUIDNotMatched = -127,
     
     PADErrorSlowProcessing = -128,
+    
+    PADErrorNoLicenseCode = -129,
+    
+    PADErrorNoActivations = -130,
 };
 
 /**

@@ -1,3 +1,12 @@
+# 4.4.0
+- Improvements for SwiftUI - We’ve updated the UI methods to make it easier to use with SwiftUI. Download the updated [Sample app here](https://github.com/PaddleHQ/sdk-mac-v4-sample) where we demonstrate best practices for using the SDK in SwiftUI 
+- Ventura UI Updates - The UI has been restructured for Ventura to allow for future customisation and improvements
+- Introduction of Activation Reclaim methods - Those will allow you to manage existing/previous activations for a license through the SDK, allowing you to deactivate older activations if the license being used has run out of available activations. - [Please find the documentation here](https://developer.paddle.com/reference/9hswcavs3e1sf-activation-reclaim-mac)
+- Fixed memory leaks.
+- Resolved deprecations and warnings for macOS Ventura.
+- Updated license persistence functionality to switch deprecated unarchiveObjectWithData methods to unarchivedObjectOfClass when using Ventura.
+
+
 # 4.3.1
 Fixed: Prevented verify methods from crashing for particular scenarios when no internet connection was available.
 
