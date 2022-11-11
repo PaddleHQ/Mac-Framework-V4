@@ -34,7 +34,7 @@ SOFTWARE.
     'Louis Harwood' => 'louis@paddle.com'
   }
 
-  s.platform = :osx, '10.10'
+  s.platform = :osx, '10.13'
   s.source   = { :http => "https://github.com/PaddleHQ/Mac-Framework-V4/archive/v4.4.0.zip" }
   s.vendored_framework  = 'Mac-Framework-V4-4.4.0/Paddle.framework'
   s.requires_arc        = false

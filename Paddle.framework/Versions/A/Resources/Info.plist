@@ -41,7 +41,7 @@
 	<key>DTXcodeBuild</key>
 	<string>14A5294e</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.14.6</string>
+	<string>10.13</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 Paddle. All rights reserved.</string>
 	<key>PADMajorMinorVersion</key>
