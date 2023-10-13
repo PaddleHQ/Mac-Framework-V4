@@ -1,3 +1,11 @@
+# 4.4.1
+- Added dispute/chargeback errors to verification and activation methods for licenses that are associated with orders that have an active dispute/chargeback.
+- Implemented internal security updates aimed at minimizing fraudulent activations.
+- Improved license verification logic to correctly report unverified activations. Previously, certain scenarios, such as manual removal of an activation via the dashboard, would erroneously trigger an “Unable to verify” error. This has now been fixed and returns the correct state.
+- Changed checkout sizing to better support the new checkout design. The new checkout design is wider than previous versions and the SDK checkout window has been updated to accommodate this.
+- Fixed popup issues when retrying PayPal payments. Previously, It was possible to open multiple Paypal popup windows for the same checkout, this has now been resolved and we now close the original popup before allowing the buyer to open a new one.
+- Addressed an issue that was preventing the local license file expiry date from being updated when calling the verify method, this will cover cases where the license has expired or the expiry has been changed via the dashboard. Previously we were returning the correct error but we were not updating the license file accordingly.
+
 # 4.4.0
 - Improvements for SwiftUI - We’ve updated the UI methods to make it easier to use with SwiftUI. Download the updated [Sample app here](https://github.com/PaddleHQ/sdk-mac-v4-sample) where we demonstrate best practices for using the SDK in SwiftUI 
 - Ventura UI Updates - The UI has been restructured for Ventura to allow for future customisation and improvements
