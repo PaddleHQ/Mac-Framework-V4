@@ -1,3 +1,6 @@
+# 4.4.2
+Fixed: Issue introduced in the latest release that was causing the SDK to crash when deactivation method was called
+
 # 4.4.1
 - Added dispute/chargeback errors to verification and activation methods for licenses that are associated with orders that have an active dispute/chargeback.
 - Implemented internal security updates aimed at minimizing fraudulent activations.
