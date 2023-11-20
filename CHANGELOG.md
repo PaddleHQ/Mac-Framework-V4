@@ -1,3 +1,6 @@
+# 4.4.3
+Fixed: Issue introduced in version 4.4.1 causing crashes on launch for Sonoma and macOS 11.
+
 # 4.4.2
 Fixed: Issue introduced in the latest release that was causing the SDK to crash when deactivation method was called
 
