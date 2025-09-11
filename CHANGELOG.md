@@ -1,3 +1,8 @@
+# 4.4.7
+- Fixed: Cancelled subscriptions now correctly report their verification state
+- Improvement: Machine identifier collection more reliable and isolated from potential change
+- Improvement: Attempt to make storage of licenses more robust
+
 # 4.4.3
 Fixed: Issue introduced in version 4.4.1 causing crashes on launch for Sonoma and macOS 11.
 
