@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>24E263</string>
+	<string>25A5279m</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,31 +17,31 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.4.7</string>
+	<string>4.5</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>4.4.7</string>
+	<string>4.5</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>24A336</string>
+	<string>25A5295e</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>15.0</string>
+	<string>26.0</string>
 	<key>DTSDKBuild</key>
-	<string>24A336</string>
+	<string>25A5295e</string>
 	<key>DTSDKName</key>
-	<string>macosx15.0</string>
+	<string>macosx26.0</string>
 	<key>DTXcode</key>
-	<string>1600</string>
+	<string>2600</string>
 	<key>DTXcodeBuild</key>
-	<string>16A242d</string>
+	<string>17A5241o</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.13</string>
+	<string>13.5</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 Paddle. All rights reserved.</string>
 	<key>PADMajorMinorVersion</key>

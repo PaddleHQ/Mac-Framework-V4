@@ -1,3 +1,7 @@
+# 4.5
+- Changed: Device Identifiers to improve persistence and prevent lost licenses/activations
+- Fixed: UI to be functional and prevent blocks in newest versions of macOS
+
 # 4.4.7
 - Fixed: Cancelled subscriptions now correctly report their verification state
 - Improvement: Machine identifier collection more reliable and isolated from potential change
