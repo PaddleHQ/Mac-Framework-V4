@@ -1,3 +1,7 @@
+# 4.5.1
+- Fixed: UI unresponsive to cursor input when displayed as a sheet
+- Fixed: Excessive prompts for keychain access
+
 # 4.5
 - Changed: Device Identifiers to improve persistence and prevent lost licenses/activations
 - Fixed: UI to be functional and prevent blocks in newest versions of macOS
