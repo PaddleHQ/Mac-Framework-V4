@@ -1,10 +1,10 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
     name: "Paddle",
     platforms: [
-        .macOS(.v10_13)
+        .macOS(.v12)
     ],
     products: [
         .library(
