@@ -1,3 +1,10 @@
+# 4.5.5
+- Improvement: Device identifier reliability
+- Fixed: Deprecated API warnings
+- Fixed: UnableToIdentify correctly reported
+- Fixed: CustomUUIDs incorrectly making some apps lose activations
+- Improvement: Xcode 27 Build Fixes
+
 # 4.5.1
 - Fixed: UI unresponsive to cursor input when displayed as a sheet
 - Fixed: Excessive prompts for keychain access
