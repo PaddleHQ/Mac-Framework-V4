@@ -35,8 +35,8 @@ SOFTWARE.
   }
 
   s.platform = :osx, '12.0'
-  s.source   = { :http => "https://github.com/PaddleHQ/Mac-Framework-V4/archive/v4.5.5.zip" }
-  s.vendored_framework  = 'Mac-Framework-V4-4.5.5/Paddle.framework'
+  s.source   = { :http => "https://github.com/PaddleHQ/Mac-Framework-V4/releases/download/v4.5.5/Paddle.framework.zip" }
+  s.vendored_framework  = 'Paddle.framework'
   s.requires_arc        = false
   s.framework           = 'WebKit';
 end
